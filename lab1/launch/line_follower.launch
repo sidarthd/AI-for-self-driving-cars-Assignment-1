@@ -1,0 +1,22 @@
+<launch>
+    <!--
+        params for PID
+    --> 
+       <node name="line_follower" type="line_follower.py" pkg="lab1" output="screen"/>
+        <param name="plan_topic" type="string" value="/planner_node/car_plan" />
+        <param name="pose_topic" type="string" value="/sim_car_pose/pose" />
+        <param name="plan_lookahead" type="int" value="2" />
+        <param name="translation_weight" type="double" value="1.0"/>
+        <param name="rotation_weight" type="double" value="5.0" />
+        <param name="kp" type="double" value="1.0" />
+        <param name="ki" type="double" value="1.5" />
+        <param name="kd" type="double" value="0.0" />
+        <param name="error_buff_length" type="int" value="10" />
+        <param name="speed" type="double" value="1.0" />
+
+   <!--
+    Launch a line_follower node here
+   -->
+ 
+
+</launch>
